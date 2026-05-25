@@ -10,7 +10,10 @@ package com.mycompany.login_poe;
  */
 import java.util.Scanner;
 
+
+
 public class Login_poe {
+    static Message app = new Message();
     public static void main(String[] args) {
         Scanner input = new Scanner(System.in);
         login authSystem = new login();
@@ -23,7 +26,7 @@ public class Login_poe {
 
         System.out.print("Enter Last Name: ");
         String lName = input.nextLine();
-
+        System.out.print ("enter your South African phone number :");
         //Reprompting Username Loop
         String user = "";
         boolean isUserValid = false;
@@ -74,6 +77,7 @@ public class Login_poe {
             
             if (check) {
                 loggedIn = true; 
+                app.run();
             }
         }
         
